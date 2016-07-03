@@ -1,12 +1,12 @@
-# name: discourse-plugin-oauth-linkedin
+# name: discourse-plugin-linkedin-auth
 # about: Enable Login via LinkedIn
 # version: 0.0.1
 # authors: Matthew Wilkin
-# url: https://github.com/cpradio/discourse-plugin-oauth-linkedin
+# url: https://github.com/cpradio/discourse-plugin-linkedin-auth
 
-enabled_site_setting :linkedin_login_enabled
+gem 'omniauth-linkedin-oauth2', '0.1.5'
 
-gem 'omniauth-linkedin', '0.2.0'
+enabled_site_setting :linkedin_enabled
 
 class LinkedInAuthenticator < ::Auth::Authenticator
   PLUGIN_NAME = 'oauth-linkedin'
@@ -34,17 +34,17 @@ class LinkedInAuthenticator < ::Auth::Authenticator
   end
 
   def register_middleware(omniauth)
-    if SiteSetting.linkedin_login_enabled
-      omniauth.provider :linkedin,
-                        SiteSetting.linkedin_login_client_id,
-                        SiteSetting.linkedin_login_client_secret_key
-    end
+    omniauth.provider :linkedin,
+                      setup: lambda { |env|
+                        strategy = env['omniauth.strategy']
+                        strategy.options[:client_id] = SiteSetting.linkedin_client_id
+                        strategy.options[:client_secret] = SiteSetting.linkedin_secret
+                      }
   end
 end
 
-
-auth_provider :title => I18n.t('linkedin_login_title'),
-              :message => I18n.t('linkedin_login_message'),
+auth_provider :title => 'with LinkedIn',
+              :message => 'Log in via LinkedIn',
               :frame_width => 920,
               :frame_height => 800,
               :authenticator => LinkedInAuthenticator.new
@@ -55,8 +55,8 @@ register_css <<CSS
   background: #46698f;
 }
 
-.btn-social.linkedin:before {
-  content: "\f08c";
+.btn-social.linkedin::before {
+  content: $fa-var-linkedin;
 }
 
 CSS

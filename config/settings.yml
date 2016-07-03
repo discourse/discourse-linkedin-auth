@@ -1,0 +1,10 @@
+plugins:
+  linkedin_login_enabled:
+    default: true
+    client: false
+  linkedin_login_client_id:
+    default: ''
+    client: false
+  linkedin_login_client_secret_key:
+    default: ''
+    client: false

@@ -18,8 +18,9 @@ Login Screen
 1. Follow the directions at [Install a Plugin](https://meta.discourse.org/t/install-a-plugin/19157) using https://github.com/cpradio/discourse-plugin-linkedin-auth.git as the repository URL.
 2. Rebuild the app using `./launcher rebuild app`
 3. Visit https://developer.linkedin.com/docs/oauth2 and follow the directions for [creating an application](https://www.linkedin.com/secure/developer?newapp=), or look up the details of your [existing application](https://www.linkedin.com/secure/developer).
-4. Add the your website as an authorized redirect url using 
-`https://example.com/auth/linkedin/callback` 
+4. Update the plugin settings in the Admin > Settings area.
+5. Add the your website as an authorized redirect url using  
+`https://example.com/auth/linkedin/callback`  
 (replacing the https with http and example.com with your full qualified domain/subdomain)
 
 ## Authors

@@ -1,14 +1,16 @@
 # name: discourse-plugin-linkedin-auth
 # about: Enable Login via LinkedIn
-# version: 0.0.1
+# version: 0.0.2
 # authors: Matthew Wilkin
 # url: https://github.com/cpradio/discourse-plugin-linkedin-auth
+
+require 'auth/oauth2_authenticator'
 
 gem 'omniauth-linkedin-oauth2', '0.1.5'
 
 enabled_site_setting :linkedin_enabled
 
-class LinkedInAuthenticator < ::Auth::Authenticator
+class LinkedInAuthenticator < ::Auth::OAuth2Authenticator
   PLUGIN_NAME = 'oauth-linkedin'
 
   def name
@@ -16,21 +18,18 @@ class LinkedInAuthenticator < ::Auth::Authenticator
   end
 
   def after_authenticate(auth_token)
-    auth_result = Auth::Result.new
+    result = super
 
-    linkedin_userid = auth_token[:uid]
-    current_info = ::PluginStore.get(PLUGIN_NAME, "linkedin_userid_#{linkedin_userid}")
+    if result.user && result.email && (result.user.email != result.email)
+      begin
+        result.user.update_columns(email: result.email)
+      rescue
+        used_by = User.find_by(email: result.email).try(:username)
+        Rails.loger.warn("FAILED to update email for #{user.username} to #{result.email} cause it is in use by #{used_by}")
+      end
+    end
 
-    auth_result.user = User.where(id: current_info[:user_id]).first if current_info
-    auth_result.name = auth_token[:info][:name]
-    auth_result.email = auth_token[:info][:email] if auth_token[:info][:email]
-    auth_result.extra_data = { linkedin_userid: linkedin_userid }
-    auth_result
-  end
-
-  def after_create_account(user, auth)
-    data = auth[:extra_data]
-    ::PluginStore.set(PLUGIN_NAME, "linkedin_userid_#{data[:linkedin_userid]}", {user_id: user.id })
+    result
   end
 
   def register_middleware(omniauth)
@@ -47,7 +46,10 @@ auth_provider :title => 'with LinkedIn',
               :message => 'Log in via LinkedIn',
               :frame_width => 920,
               :frame_height => 800,
-              :authenticator => LinkedInAuthenticator.new
+              :authenticator => LinkedInAuthenticator.new('linkedin',
+                                                          trusted: true,
+                                                          auto_create_account: true)
+
 
 register_css <<CSS
 

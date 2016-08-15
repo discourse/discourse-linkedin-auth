@@ -1,7 +1,7 @@
 plugins:
   linkedin_enabled:
     client: true
-    default: true
+    default: false
   linkedin_client_id:
     client: false
     default: ''

@@ -43,6 +43,7 @@ class LinkedInAuthenticator < ::Auth::OAuth2Authenticator
 end
 
 auth_provider :title => 'with LinkedIn',
+              enabled_setting: "linkedin_enabled",
               :message => 'Log in via LinkedIn',
               :frame_width => 920,
               :frame_height => 800,

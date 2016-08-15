@@ -2,10 +2,10 @@
 This plugin adds support logging in via LinkedIn.
 
 Admin Settings  
-![](https://raw.githubusercontent.com/cpradio/discourse-plugin-linkedin-auth/master/screenshot-admin-settings.png)
+![](https://raw.githubusercontent.com/discourse/discourse-plugin-linkedin-auth/master/screenshot-admin-settings.png)
 
 Login Screen  
-![](https://raw.githubusercontent.com/cpradio/discourse-plugin-linkedin-auth/master/screenshot-login-screen.png)
+![](https://raw.githubusercontent.com/discourse/discourse-plugin-linkedin-auth/master/screenshot-login-screen.png)
 
 ## How to Help
 
@@ -15,7 +15,7 @@ Login Screen
 
 ## Installation
 
-1. Follow the directions at [Install a Plugin](https://meta.discourse.org/t/install-a-plugin/19157) using https://github.com/cpradio/discourse-plugin-linkedin-auth.git as the repository URL.
+1. Follow the directions at [Install a Plugin](https://meta.discourse.org/t/install-a-plugin/19157) using https://github.com/discourse/discourse-plugin-linkedin-auth.git as the repository URL.
 2. Rebuild the app using `./launcher rebuild app`
 3. Visit https://developer.linkedin.com/docs/oauth2 and follow the directions for [creating an application](https://www.linkedin.com/secure/developer?newapp=), or look up the details of your [existing application](https://www.linkedin.com/secure/developer).
 4. Update the plugin settings in the Admin > Settings area.

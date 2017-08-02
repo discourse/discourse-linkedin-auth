@@ -42,15 +42,16 @@ class LinkedInAuthenticator < ::Auth::OAuth2Authenticator
   end
 end
 
-auth_provider :title => 'with LinkedIn',
-              enabled_setting: "linkedin_enabled",
-              :message => 'Log in via LinkedIn',
-              :frame_width => 920,
-              :frame_height => 800,
-              :authenticator => LinkedInAuthenticator.new('linkedin',
-                                                          trusted: true,
-                                                          auto_create_account: true)
-
+auth_provider title: 'with LinkedIn',
+  enabled_setting: "linkedin_enabled",
+  message: 'Log in via LinkedIn',
+  frame_width: 920,
+  frame_height: 800,
+  authenticator: LinkedInAuthenticator.new(
+    'linkedin',
+    trusted: true,
+    auto_create_account: true
+  )
 
 register_css <<CSS
 

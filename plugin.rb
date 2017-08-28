@@ -6,7 +6,7 @@
 
 require 'auth/oauth2_authenticator'
 
-gem 'omniauth-linkedin-oauth2', '0.1.5'
+gem 'omniauth-linkedin-oauth2', '0.2.5'
 
 enabled_site_setting :linkedin_enabled
 

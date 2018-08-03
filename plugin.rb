@@ -40,6 +40,10 @@ class LinkedInAuthenticator < ::Auth::OAuth2Authenticator
                         strategy.options[:client_secret] = SiteSetting.linkedin_secret
                       }
   end
+
+  def enabled?
+    SiteSetting.linkedin_enabled
+  end
 end
 
 auth_provider title: 'with LinkedIn',

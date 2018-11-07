@@ -8,6 +8,8 @@ require 'auth/oauth2_authenticator'
 
 gem 'omniauth-linkedin-oauth2', '0.2.5'
 
+register_svg_icon "fab-linkedin-in" if respond_to?(:register_svg_icon)
+
 enabled_site_setting :linkedin_enabled
 
 class LinkedInAuthenticator < ::Auth::OAuth2Authenticator
@@ -61,10 +63,6 @@ register_css <<CSS
 
 .btn-social.linkedin {
   background: #46698f;
-}
-
-.btn-social.linkedin::before {
-  content: $fa-var-linkedin;
 }
 
 CSS

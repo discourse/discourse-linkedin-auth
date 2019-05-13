@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # name: discourse-plugin-linkedin-auth
 # about: Enable Login via LinkedIn
 # version: 0.0.2

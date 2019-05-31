@@ -8,9 +8,10 @@
 
 require 'auth/oauth2_authenticator'
 
-gem 'omniauth-linkedin-oauth2', '0.2.5'
+gem 'omniauth-linkedin-oauth2', '1.0.0'
 
 register_svg_icon "fab-linkedin-in" if respond_to?(:register_svg_icon)
+register_asset 'stylesheets/linkedin-login.scss'
 
 enabled_site_setting :linkedin_enabled
 
@@ -50,21 +51,11 @@ class LinkedInAuthenticator < ::Auth::OAuth2Authenticator
   end
 end
 
-auth_provider title: 'with LinkedIn',
-              enabled_setting: "linkedin_enabled",
-              message: 'Log in via LinkedIn',
-              frame_width: 920,
+auth_provider frame_width: 920,
               frame_height: 800,
+              icon: 'fab-linkedin-in',
               authenticator: LinkedInAuthenticator.new(
                 'linkedin',
                 trusted: true,
                 auto_create_account: true
               )
-
-register_css <<CSS
-
-.btn-social.linkedin {
-  background: #46698f;
-}
-
-CSS

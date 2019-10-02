@@ -2,7 +2,7 @@
 
 # name: discourse-plugin-linkedin-auth
 # about: Enable Login via LinkedIn
-# version: 0.0.2
+# version: 0.0.3
 # authors: Matthew Wilkin
 # url: https://github.com/cpradio/discourse-plugin-linkedin-auth
 
@@ -30,7 +30,7 @@ class LinkedInAuthenticator < ::Auth::OAuth2Authenticator
         result.user.primary_email.update!(email: result.email)
       rescue
         used_by = User.find_by_email(result.email)&.username
-        Rails.loger.warn("FAILED to update email for #{user.username} to #{result.email} cause it is in use by #{used_by}")
+        Rails.logger.warn("FAILED to update email for #{user.username} to #{result.email} cause it is in use by #{used_by}")
       end
     end
 

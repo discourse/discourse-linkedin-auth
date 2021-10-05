@@ -5,3 +5,7 @@
 # https://translate.discourse.org/
 
 sv:
+  site_settings:
+    linkedin_enabled: 'Tillåter du användare att autentiseras via LinkedIn?'
+    linkedin_client_id: 'LinkedIn-klient-ID (Behöver du ett? Gå till <a href="https://developer.linkedin.com/docs/oauth2">https://developer.linkedin.com/docs/oauth2</a>)'
+    linkedin_secret: 'LinkedIn hemlig nyckel'

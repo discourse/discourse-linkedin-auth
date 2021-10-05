@@ -5,3 +5,9 @@
 # https://translate.discourse.org/
 
 he:
+  js:
+    login:
+      linkedin:
+        name: LinkedIn
+        title: עם LinkedIn
+        message: כניסה דרך LinkedIn

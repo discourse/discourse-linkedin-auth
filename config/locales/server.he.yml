@@ -5,3 +5,7 @@
 # https://translate.discourse.org/
 
 he:
+  site_settings:
+    linkedin_enabled: 'לאפשר למשתמשים לעבור אימות דרך LinkedIn?'
+    linkedin_client_id: 'מזהה לקוח LinkedIn (יש לך צורך בכזה? נא לבקר ב־<a href="https://developer.linkedin.com/docs/oauth2">https://developer.linkedin.com/docs/oauth2</a>)'
+    linkedin_secret: 'מפתח סודי של LinkedIn'

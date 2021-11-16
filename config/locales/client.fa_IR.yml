@@ -5,3 +5,9 @@
 # https://translate.discourse.org/
 
 fa_IR:
+  js:
+    login:
+      linkedin:
+        name: لینکدین
+        title: با لینکدین
+        message: از طریق لینکدین وارد شوید

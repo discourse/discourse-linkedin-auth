@@ -1,10 +1,7 @@
 plugins:
   linkedin_enabled:
-    client: true
     default: false
   linkedin_client_id:
-    client: false
     default: ''
   linkedin_secret:
-    client: false
     default: ''

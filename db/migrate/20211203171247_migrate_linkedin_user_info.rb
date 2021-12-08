@@ -21,6 +21,7 @@ class MigrateLinkedinUserInfo < ActiveRecord::Migration[6.1]
       updated_at
     FROM oauth2_user_infos
     WHERE provider = 'linkedin'
+    ON CONFLICT DO NOTHING
     SQL
   end
 

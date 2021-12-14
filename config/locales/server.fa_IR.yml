@@ -7,5 +7,5 @@
 fa_IR:
   site_settings:
     linkedin_enabled: 'به کاربران اجازه می‌دهید با استفاده از لینکدین احراز هویت کنند؟'
-    linkedin_client_id: 'شناسه مشتری لینکدین (اگر نیاز دارید؟ از این پیوند <a href="https://developer.linkedin.com/docs/oauth2">https://developer.linkedin.com/docs/oauth2</a> بازدید کنید)'
+    linkedin_client_id: 'شناسه مشتری لینکدین «اگر نیاز دارید؟ از این پیوند <a href="https://developer.linkedin.com/docs/oauth2">https://developer.linkedin.com/docs/oauth2</a> بازدید کنید»'
     linkedin_secret: 'کلید مخفی لینکدین'

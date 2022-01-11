@@ -5,3 +5,7 @@
 # https://translate.discourse.org/
 
 zh_CN:
+  site_settings:
+    linkedin_enabled: '允许用户使用 LinkedIn 进行身份验证？'
+    linkedin_client_id: 'LinkedIn 客户端 ID（需要一个？请访问 <a href="https://developer.linkedin.com/docs/oauth2">https://developer.linkedin.com/docs/oauth2</a>）'
+    linkedin_secret: 'LinkedIn 密钥'

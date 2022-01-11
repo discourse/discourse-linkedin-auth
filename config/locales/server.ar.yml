@@ -5,3 +5,7 @@
 # https://translate.discourse.org/
 
 ar:
+  site_settings:
+    linkedin_enabled: 'هل تريد السماح للمستخدمين باستخدام LinkedIn؟'
+    linkedin_client_id: 'معرِّف عميل LinkedIn (هل تحتاج واحدًا؟ انتقل إلى <a href="https://developer.linkedin.com/docs/oauth2">https://developer.linkedin.com/docs/oauth2</a>)'
+    linkedin_secret: 'مفتاح LinkedIn السري'

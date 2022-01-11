@@ -5,3 +5,8 @@
 # https://translate.discourse.org/
 
 zh_CN:
+  js:
+    login:
+      linkedin:
+        name: LinkedIn
+        title: 使用 LinkedIn

@@ -5,3 +5,7 @@
 # https://translate.discourse.org/
 
 ja:
+  site_settings:
+    linkedin_enabled: 'LinkedIn を使ったユーザーの認証を許可しますか？'
+    linkedin_client_id: 'LinkedIn クライアント ID（必要ですか？<a href="https://developer.linkedin.com/docs/oauth2">https://developer.linkedin.com/docs/oauth2</a> にアクセスしてください）'
+    linkedin_secret: 'LinkedIn シークレットキー'

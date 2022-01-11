@@ -5,3 +5,8 @@
 # https://translate.discourse.org/
 
 de:
+  js:
+    login:
+      linkedin:
+        name: LinkedIn
+        title: mit LinkedIn

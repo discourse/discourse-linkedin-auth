@@ -5,3 +5,7 @@
 # https://translate.discourse.org/
 
 fi:
+  site_settings:
+    linkedin_enabled: 'Sallitaanko käyttäjien tehdä todennus LinkedInillä?'
+    linkedin_client_id: 'LinkedInin asiakastunnus (tarvitsetko sellaisen? käy osoitteessa <a href="https://developer.linkedin.com/docs/oauth2">https://developer.linkedin.com/docs/oauth2</a>)'
+    linkedin_secret: 'LinkedInin salainen avain'

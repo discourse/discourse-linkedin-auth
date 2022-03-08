@@ -5,3 +5,7 @@
 # https://translate.discourse.org/
 
 el:
+  site_settings:
+    linkedin_enabled: 'Να επιτρέπεται στους χρήστες ο έλεγχος ταυτότητας χρησιμοποιώντας το LinkedIn;'
+    linkedin_client_id: 'Απαραίτητο το αναγνωριστικό πελάτη LinkedIn (χρειάζεστε ένα για να επισκεφθείτε τη διεύθυνση <a href="https://developer.linkedin.com/docs/oauth2">https://developer.linkedin.com/docs/oauth2</a>)'
+    linkedin_secret: 'Μυστικός Κωδικός LinkedIn'

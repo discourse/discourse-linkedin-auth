@@ -5,3 +5,8 @@
 # https://translate.discourse.org/
 
 el:
+  js:
+    login:
+      linkedin:
+        name: LinkedIn
+        title: με το LinkedIn

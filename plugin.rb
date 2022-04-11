@@ -8,7 +8,9 @@
 
 gem 'omniauth-linkedin-oauth2', '1.0.0'
 
-register_svg_icon "fab-linkedin-in"
+register_svg_icon "fab-linkedin"
+
+register_asset "stylesheets/common.scss"
 
 enabled_site_setting :linkedin_enabled
 
@@ -32,4 +34,4 @@ class ::LinkedInAuthenticator < ::Auth::ManagedAuthenticator
 end
 
 auth_provider authenticator: ::LinkedInAuthenticator.new,
-              icon: 'fab-linkedin-in'
+              icon: 'fab-linkedin'

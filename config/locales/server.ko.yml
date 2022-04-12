@@ -5,3 +5,5 @@
 # https://translate.discourse.org/
 
 ko:
+  site_settings:
+    linkedin_enabled: '사용자가 LinkedIn을 사용하여 인증하도록 허용하시겠습니까?'

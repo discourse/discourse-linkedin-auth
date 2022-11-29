@@ -5,3 +5,7 @@
 # https://translate.discourse.org/
 
 nl:
+  site_settings:
+    linkedin_enabled: 'Gebruikers toestaan zich aan te melden met LinkedIn?'
+    linkedin_client_id: 'LinkedIn-client-ID (Een nodig? Ga naar <a href="https://developer.linkedin.com/docs/oauth2">https://developer.linkedin.com/docs/oauth2</a>)'
+    linkedin_secret: 'Geheime LinkedIn-sleutel'

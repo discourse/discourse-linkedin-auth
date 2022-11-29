@@ -5,3 +5,8 @@
 # https://translate.discourse.org/
 
 nl:
+  js:
+    login:
+      linkedin:
+        name: LinkedIn
+        title: Aanmelden met LinkedIn

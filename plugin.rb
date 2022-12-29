@@ -6,7 +6,7 @@
 # authors: Matthew Wilkin
 # url: https://github.com/discourse/discourse-linkedin-auth
 
-gem 'omniauth-linkedin-oauth2', '1.0.0'
+gem "omniauth-linkedin-oauth2", "1.0.0"
 
 register_svg_icon "fab-linkedin"
 
@@ -16,16 +16,17 @@ enabled_site_setting :linkedin_enabled
 
 class ::LinkedInAuthenticator < ::Auth::ManagedAuthenticator
   def name
-    'linkedin'
+    "linkedin"
   end
 
   def register_middleware(omniauth)
     omniauth.provider :linkedin,
-                      setup: lambda { |env|
-                        strategy = env['omniauth.strategy']
-                        strategy.options[:client_id] = SiteSetting.linkedin_client_id
-                        strategy.options[:client_secret] = SiteSetting.linkedin_secret
-                      }
+                      setup:
+                        lambda { |env|
+                          strategy = env["omniauth.strategy"]
+                          strategy.options[:client_id] = SiteSetting.linkedin_client_id
+                          strategy.options[:client_secret] = SiteSetting.linkedin_secret
+                        }
   end
 
   def enabled?
@@ -40,5 +41,4 @@ class ::LinkedInAuthenticator < ::Auth::ManagedAuthenticator
   end
 end
 
-auth_provider authenticator: ::LinkedInAuthenticator.new,
-              icon: 'fab-linkedin'
+auth_provider authenticator: ::LinkedInAuthenticator.new, icon: "fab-linkedin"

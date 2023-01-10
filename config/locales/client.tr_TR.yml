@@ -5,3 +5,8 @@
 # https://translate.discourse.org/
 
 tr_TR:
+  js:
+    login:
+      linkedin:
+        name: LinkedIn
+        title: LinkedIn ile oturum açın

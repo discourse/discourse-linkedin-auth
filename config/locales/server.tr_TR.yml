@@ -5,3 +5,7 @@
 # https://translate.discourse.org/
 
 tr_TR:
+  site_settings:
+    linkedin_enabled: 'Kullanıcıların LinkedIn kullanarak kimlik doğrulaması yapmasına izin verilsin mi?'
+    linkedin_client_id: 'LinkedIn Müşteri Kimliği (ihtiyacınız var mı? <a href="https://developer.linkedin.com/docs/oauth2">https://developer.linkedin.com/docs/oauth2</a> adresini ziyaret edin)'
+    linkedin_secret: 'LinkedIn Gizli Anahtarı'

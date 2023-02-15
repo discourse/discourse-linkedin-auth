@@ -7,5 +7,5 @@
 ru:
   site_settings:
     linkedin_enabled: 'Разрешить пользователям аутентифицироваться с помощью LinkedIn?'
-    linkedin_client_id: 'ID клиента LinkedIn (нужен? посетите <a href="https://developer.linkedin.com/docs/oauth2">https://developer.linkedin.com/docs/oauth2</a>)'
+    linkedin_client_id: 'ID клиента LinkedIn (как получить ID см. здесь: <a href="https://developer.linkedin.com/docs/oauth2">https://developer.linkedin.com/docs/oauth2</a>)'
     linkedin_secret: 'Секретный ключ LinkedIn'

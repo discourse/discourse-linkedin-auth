@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # name: discourse-linkedin-auth
-# about: Provides the ability to use LinkedIn as a login option. 
+# about: Provides the ability to use LinkedIn as a login option.
 # meta_topic_id: 46818
 # version: 1.0
 # authors: Matthew Wilkin

@@ -5,3 +5,7 @@
 # https://translate.discourse.org/
 
 pl_PL:
+  site_settings:
+    linkedin_enabled: 'Zezwolić użytkownikom na uwierzytelnianie przy użyciu LinkedIn?'
+    linkedin_client_id: 'Identyfikator klienta LinkedIn (potrzebujesz go? odwiedź <a href="https://developer.linkedin.com/docs/oauth2">https://developer.linkedin.com/docs/oauth2</a>)'
+    linkedin_secret: 'Tajny klucz LinkedIn'

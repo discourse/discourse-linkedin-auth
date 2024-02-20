@@ -5,3 +5,8 @@
 # https://translate.discourse.org/
 
 pl_PL:
+  js:
+    login:
+      linkedin:
+        name: LinkedIn
+        title: Zaloguj się za pomocą LinkedIn

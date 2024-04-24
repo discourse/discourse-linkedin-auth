@@ -1,3 +1,5 @@
+# ⚠️ This plugin is no longer supported
+
 # LinkedIn OAuth Login Plugin
 This plugin adds support logging in via LinkedIn.
 

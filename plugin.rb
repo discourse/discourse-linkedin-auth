@@ -18,3 +18,9 @@ enabled_site_setting :linkedin_enabled
 require_relative "lib/linked_in_authenticator"
 
 auth_provider authenticator: ::LinkedInAuthenticator.new, icon: "fab-linkedin"
+
+after_initialize do
+  require_relative "app/services/problem_check/deprecated_linkedin_auth"
+
+  register_problem_check ProblemCheck::DeprecatedLinkedInAuth
+end

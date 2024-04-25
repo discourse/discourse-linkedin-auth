@@ -20,9 +20,7 @@ require_relative "lib/linked_in_authenticator"
 auth_provider authenticator: ::LinkedInAuthenticator.new, icon: "fab-linkedin"
 
 after_initialize do
-  if SiteSetting.linkedin_enabled
-    AdminDashboardData.add_problem_check do
-      "The discourse-linkedin-auth plugin is no longer supported, and LinkedIn OpenID Connect support has been added to Discourse core. You are recommended to update the authentication method in your LinkedIn app. Please see https://meta.discourse.org/t/discourse-linkedin-authentication/46818 for more information."
-    end
-  end
+  require_relative "app/services/problem_check/deprecated_linkedin_auth"
+
+  register_problem_check ProblemCheck::DeprecatedLinkedInAuth
 end

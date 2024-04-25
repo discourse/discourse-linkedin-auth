@@ -1,5 +1,7 @@
 # ⚠️ This plugin is no longer supported
 
+See [Configure LinkedIn OpenID Connect login for Discourse](https://meta.discourse.org/t/configure-linkedin-openid-connect-login-for-discourse/305366).
+
 # LinkedIn OAuth Login Plugin
 This plugin adds support logging in via LinkedIn.
 

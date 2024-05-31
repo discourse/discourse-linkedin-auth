@@ -5,3 +5,7 @@
 # https://translate.discourse.org/
 
 uk:
+  js:
+    login:
+      linkedin:
+        name: LinkedIn

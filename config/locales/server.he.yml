@@ -5,6 +5,9 @@
 # https://translate.discourse.org/
 
 he:
+  dashboard:
+    problem:
+      deprecated_linked_in_auth: "התמיכה בתוסף discourse-linkedin-auth הופסקה, והתמיכה ב־LinkedIn OpenID Connect נוספה לליבה של Discourse. מומלץ לעדכן את שיטת האימות ביישומון ה־LinkedIn שלך. ניתן לפנות אל <a href='https://meta.discourse.org/t/discourse-linkedin-authentication/46818'>https://meta.discourse.org/t/discourse-linkedin-authentication/46818</a> למידע נוסף."
   site_settings:
     linkedin_enabled: 'לאפשר למשתמשים לעבור אימות דרך LinkedIn?'
     linkedin_client_id: 'מזהה לקוח LinkedIn (יש לך צורך בכזה? נא לבקר ב־<a href="https://developer.linkedin.com/docs/oauth2">https://developer.linkedin.com/docs/oauth2</a>)'
